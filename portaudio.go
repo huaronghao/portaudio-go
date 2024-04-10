@@ -12,8 +12,11 @@ The StreamParameters struct combines parameters for both the input and the outpu
 package portaudio
 
 /*
-#cgo pkg-config: portaudio-2.0
-#include <portaudio.h>
+#cgo !windows pkg-config: portaudio-2.0
+#cgo windows CFLAGS: -I${SRCDIR}
+#cgo (windows && amd64) LDFLAGS: -L ${SRCDIR}/x86_64 -lsherpa-onnx-portaudio
+#cgo (windows && 386) LDFLAGS: -L ${SRCDIR}/x686 -lsherpa-onnx-portaudio
+#include "portaudio.h"
 extern PaStreamCallback* paStreamCallback;
 */
 import "C"
