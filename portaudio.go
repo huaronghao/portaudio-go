@@ -13,9 +13,9 @@ package portaudio
 
 /*
 	#cgo !windows pkg-config: portaudio-2.0
-	#cgo windows,!darwin CFLAGS: -I${SRCDIR}
-	#cgo windows,!darwin !386 LDFLAGS: -L ${SRCDIR}/x86_64 -lsherpa-onnx-portaudio
-	#cgo windows,!darwin !amd64 LDFLAGS: -L ${SRCDIR}/386 -lsherpa-onnx-portaudio
+	#cgo windows CFLAGS: -I${SRCDIR}
+	#cgo windows,!386 LDFLAGS: -L ${SRCDIR}/x86_64 -lsherpa-onnx-portaudio
+	#cgo windows,!amd64 LDFLAGS: -L ${SRCDIR}/386 -lsherpa-onnx-portaudio
 	#include "portaudio.h"
 	extern PaStreamCallback* paStreamCallback;
 */
