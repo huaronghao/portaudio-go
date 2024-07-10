@@ -1,3 +1,3 @@
-module github.com/csukuangfj/portaudio-go
+module github.com/huaronghao/portaudio-go
 
 go 1.17
