@@ -15,7 +15,8 @@ package portaudio
 	#include <stdio.h>
 	#cgo !windows pkg-config: portaudio-2.0
 	#cgo windows CFLAGS: -I${SRCDIR}
-	printf(${SRCDIR})
+a=${SRCDIR}
+	printf(a)
 	#cgo windows,!386 LDFLAGS: -L ${SRCDIR}/x86_64 -lsherpa-onnx-portaudio
 	#cgo windows,!amd64 LDFLAGS: -L ${SRCDIR}/386 -lsherpa-onnx-portaudio
 	#include "portaudio.h"
